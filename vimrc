@@ -8,7 +8,7 @@ set incsearch
 set laststatus=2
 set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
 set ofu=syntaxcomplete#Complete
-
+set history=1000
 set splitbelow
 set splitright
 set ignorecase
@@ -30,12 +30,13 @@ set expandtab
 set smarttab
 set shiftwidth=4
 set tabstop=4
-
 set lbr    " Linebreak
 set tw=500 " Linebreak on 500 characters
 set ai     " Auto indent
 set si     " Smart indent
 set wrap   " Wrap lines
+set encoding=utf8
+set ffs=unix,dos,mac
 
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -70,30 +71,29 @@ call vundle#end()
 " Enable filetype plugins
 filetype plugin indent on
 syntax on
+set term=xterm-256color
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
-set background=dark
-set term=xterm-256color
-try
-	colorscheme solarized
-catch
-endtry
 
-if has("gui_running")
+if has('gui_running')
 	set guioptions-=T
 	set guioptions-=e
 	set t_Co=256
 	set guitablabel=%M\ %t
+	set background=light
+	try
+		colorscheme solarized
+	catch
+	endtry
+else
+    set background=dark
+	try
+		colorscheme solarized
+	catch
+	endtry
 endif
 
-set encoding=utf8
-set ffs=unix,dos,mac
-
-""""""""""""""""""""""""""""""
-" => Visual mode related
-""""""""""""""""""""""""""""""
 " Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
