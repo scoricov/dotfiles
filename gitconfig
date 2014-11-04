@@ -1,0 +1,30 @@
+[user]
+	name = Alexey Skorikov
+	email = alexey@skorikov.name
+[color]
+	ui = true
+[color "diff"]
+	meta = cyan
+[core]
+	editor = vim
+	excludesfile = /Users/bitman/.gitignore_global
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	lo = log --pretty=format:'%h | %ad | %s%d [%an]' --graph --date=iso
+	ds = diff --staged
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+#[branch]
+#	autosetuprebase = always
+[push]
+	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
