@@ -1,30 +1,58 @@
 DIR=`pwd`
 
-# VIM
-mkdir -p ~/.vim/colors
-mkdir ~/.vim/bitmaps
-mkdir ~/.vim/autoload
-mkdir ~/.vim/bundle
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
-ln -s ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
-ln -s ~/.vim/bundle/vim-colors-solarized/bitmaps/togglebg.png ~/.vim/bitmaps/
-ln -s ~/.vim/bundle/vim-colors-solarized/autoload/togglebg.vim ~/.vim/autoload/
-ln -s $DIR/vimrc ~/.vimrc
+echo "Setting up dotfiles in $HOME from $DIR"
 
-# ZSH
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-ln -s $DIR/zshrc ~/.zshrc
-ln -s $DIR/zshenv ~/.zshenv
-ln -s $DIR/zshprofile ~/.zshprofile
-rm $DIR/oh-my-zsh/themes/agnoster.zsh-theme
-ln -s $DIR/oh-my-zsh/themes/agnoster.zsh-theme ~/.oh-my-zsh/themes/
+# VIM ##########
 
-# OTHER
-ln -s $DIR/gemrc ~/.gemrc
-ln -s $DIR/gitconfig ~/.gitconfig
-ln -s $DIR/gitignore_global ~/.gitignore_global
-ln -s $DIR/hgignore_global ~/.hgignore_global
-ln -s $DIR/module-starter ~/.module-starter
-ln -s $DIR/rspec ~/.rspec
-ln -s $DIR/tmux.conf ~/.tmux.conf
+rm -rf $HOME/.vim
+mkdir -p $HOME/.vim/colors
+mkdir $HOME/.vim/bitmaps
+mkdir $HOME/.vim/autoload
+mkdir $HOME/.vim/bundle
+git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+git clone https://github.com/altercation/vim-colors-solarized.git $HOME/.vim/bundle/vim-colors-solarized
+ln -s $HOME/.vim/bundle/vim-colors-solarized/colors/solarized.vim $HOME/.vim/colors
+ln -s $HOME/.vim/bundle/vim-colors-solarized/bitmaps/togglebg.png $HOME/.vim/bitmaps
+ln -s $HOME/.vim/bundle/vim-colors-solarized/autoload/togglebg.vim $HOME/.vim/autoload
+rm $HOME/vimrc
+ln -s $DIR/vimrc $HOME/.vimrc
+
+# ZSH ##########
+
+rm -rf $HOME/.oh-my-zsh
+git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
+
+rm $HOME/.zshrc
+ln -s $DIR/zshrc $HOME/.zshrc
+
+rm $HOME/.zshenv
+ln -s $DIR/zshenv $HOME/.zshenv
+
+rm $HOME/.zshprofile
+ln -s $DIR/zshprofile $HOME/.zshprofile
+
+rm $HOME/.oh-my-zsh/themes/agnoster.zsh-theme
+ln -s $DIR/oh-my-zsh/themes/agnoster.zsh-theme $HOME/.oh-my-zsh/themes/agnoster.zsh-theme
+
+# OTHER ##########
+
+rm $HOME/.gemrc
+ln -s $DIR/gemrc $HOME/.gemrc
+
+rm $HOME/.gitconfig
+ln -s $DIR/gitconfig $HOME/.gitconfig
+
+rm $HOME/.gitignore_global
+ln -s $DIR/gitignore_global $HOME/.gitignore_global
+
+rm $HOME/.hgignore_global
+ln -s $DIR/hgignore_global $HOME/.hgignore_global
+
+rm -rf $HOME/.module-starter
+ln -s $DIR/module-starter $HOME/.module-starter
+
+rm $HOME/.rspec
+ln -s $DIR/rspec $HOME/.rspec
+
+rm $HOME/.tmux.conf
+ln -s $DIR/tmux.conf $HOME/.tmux.conf

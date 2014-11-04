@@ -1,4 +1,4 @@
 syntax: glob
 
-*~
+*$HOME
 .DS_Store
