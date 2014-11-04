@@ -16,6 +16,7 @@ ln -s $HOME/.vim/bundle/vim-colors-solarized/bitmaps/togglebg.png $HOME/.vim/bit
 ln -s $HOME/.vim/bundle/vim-colors-solarized/autoload/togglebg.vim $HOME/.vim/autoload
 rm $HOME/vimrc
 ln -s $DIR/vimrc $HOME/.vimrc
+vim +PluginInstall +qall
 
 # ZSH ##########
 
