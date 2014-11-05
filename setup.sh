@@ -9,6 +9,9 @@ mkdir -p $HOME/.vim/colors
 mkdir $HOME/.vim/bitmaps
 mkdir $HOME/.vim/autoload
 mkdir $HOME/.vim/bundle
+mkdir $HOME/.vim/backup
+mkdir $HOME/.vim/swap
+mkdir $HOME/.vim/undo
 git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 git clone https://github.com/altercation/vim-colors-solarized.git $HOME/.vim/bundle/vim-colors-solarized
 ln -s $HOME/.vim/bundle/vim-colors-solarized/colors/solarized.vim $HOME/.vim/colors
