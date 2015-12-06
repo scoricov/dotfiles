@@ -111,6 +111,13 @@ set term=xterm-256color
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 
+" Perl
+" - syntax color complex things like @{${"foo"}}
+let perl_extended_vars = 1
+" - includes POD
+let perl_include_pod = 1
+
+
 " GUI
 if has('gui_running')
     set guioptions-=T

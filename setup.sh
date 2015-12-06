@@ -60,3 +60,7 @@ ln -s $DIR/rspec $HOME/.rspec
 
 rm $HOME/.tmux.conf
 ln -s $DIR/tmux.conf $HOME/.tmux.conf
+
+rm $HOME/.iterm/com.googlecode.iterm2.plist
+ln -s $DIR/com.googlecode.iterm2.plist $HOME/.iterm/com.googlecode.iterm2.plist
+

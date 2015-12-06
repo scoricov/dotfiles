@@ -14,6 +14,7 @@ alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 alias v=vim
 alias sync-downloads="$HOME/.bin/sync-downloads"
+alias writenow="$HOME/Documents/Journal/writenow.sh"
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
