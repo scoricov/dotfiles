@@ -39,7 +39,7 @@ SHARE_HISTORY="false"
 INC_APPEND_HISTORY="false"
 
 # Loading RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+###[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Which plugins would you like to load? (plugins can be found in $HOME/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to $HOME/.oh-my-zsh/custom/plugins/
@@ -48,3 +48,10 @@ INC_APPEND_HISTORY="false"
 plugins=(git osx dircycle ruby rails perl cpanm golang macports tmux)
 
 source $ZSH/oh-my-zsh.sh
+
+# Setting priority for MacPorts and MySQL executables
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
+export MANPATH=/opt/local/share/man:$MANPATH
+export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
+export MAGICK_HOME="/opt/local/lib"
+

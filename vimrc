@@ -95,6 +95,7 @@ Plugin 'elixir-lang/vim-elixir'
 " Plugin 'vim-scripts/VimClojure'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'wincent/command-t'
+Plugin 'derekwyatt/vim-scala'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 call vundle#end()
