@@ -19,3 +19,6 @@ export PATH="$HOME/.perl5/bin:$PATH";
 export PATH="/usr/local/go/bin:$PATH";
 export GOPATH="$HOME/.gocode"
 
+# java
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
