@@ -45,7 +45,8 @@ INC_APPEND_HISTORY="false"
 # Custom plugins may be added to $HOME/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git osx dircycle ruby rails perl cpanm golang macports tmux)
+#plugins=(git osx dircycle ruby rails perl cpanm golang macports tmux)
+plugins=(git osx dircycle python pyenv perl cpanm golang macports tmux rsync sudo brew git-flow npm aws)
 
 source $ZSH/oh-my-zsh.sh
 
