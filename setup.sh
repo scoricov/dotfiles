@@ -17,7 +17,7 @@ git clone https://github.com/altercation/vim-colors-solarized.git $HOME/.vim/bun
 ln -s $HOME/.vim/bundle/vim-colors-solarized/colors/solarized.vim $HOME/.vim/colors
 ln -s $HOME/.vim/bundle/vim-colors-solarized/bitmaps/togglebg.png $HOME/.vim/bitmaps
 ln -s $HOME/.vim/bundle/vim-colors-solarized/autoload/togglebg.vim $HOME/.vim/autoload
-rm $HOME/vimrc
+rm $HOME/.vimrc
 ln -s $DIR/vimrc $HOME/.vimrc
 vim +PluginInstall +qall
 
