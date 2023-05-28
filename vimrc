@@ -98,6 +98,8 @@ Plugin 'wincent/command-t'
 Plugin 'derekwyatt/vim-scala'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Syntastic'
 call vundle#end()
 
 " Enable filetype plugins
@@ -105,6 +107,17 @@ if has ("autocmd")
     " File type detection. Indent based on filetype. Recommended.
     filetype plugin indent on
 endif
+
+
+" Syntastic plugin
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
 
 syntax on
 set omnifunc=syntaxcomplete#Complete

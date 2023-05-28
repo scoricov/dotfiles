@@ -15,7 +15,6 @@ alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 alias v=vim
 alias sync-downloads="$HOME/.bin/sync-downloads"
 alias writenow="$HOME/Documents/Journal/writenow.sh"
-alias python=/usr/local/bin/python3
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
@@ -46,8 +45,8 @@ INC_APPEND_HISTORY="false"
 # Custom plugins may be added to $HOME/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-#plugins=(git osx dircycle ruby rails perl cpanm golang macports tmux)
-plugins=(git osx dircycle python pyenv perl cpanm golang macports tmux rsync sudo brew git-flow npm aws)
+#plugins=(git macos dircycle ruby rails perl cpanm golang macports tmux)
+plugins=(git macos dircycle python pyenv perl cpanm golang macports tmux rsync sudo brew git-flow npm aws)
 
 source $ZSH/oh-my-zsh.sh
 

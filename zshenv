@@ -1,7 +1,7 @@
 # paths
 
 # path priority for macports
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
 
 # basic
 export LC_ALL=en_US.UTF-8

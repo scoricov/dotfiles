@@ -14,10 +14,12 @@
 	br = branch
 	ci = commit
 	lo = log --pretty=format:'%h | %ad | %s%d [%an]' --graph --date=iso
-	ds = diff --staged
+    ds = diff --staged
+    br = branch
+    cl = clone
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
